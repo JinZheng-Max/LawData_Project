@@ -1,0 +1,137 @@
+/* 顶部统一的CSS样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Microsoft YaHei", sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+}
+
+.top-banner {
+    background: linear-gradient(to right, #ef4242, #ef7878);
+    color: white;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 6px;
+}
+
+/* 系统名称区域 */
+.title-container {
+    display: flex;
+    justify-content: space-between;/*垂直方向对齐方式，居中*/
+    align-items: center;/*水平方向对齐方式，居中*/
+    background-color: white;
+    padding: 25px 15px;
+    border-bottom: 2px solid #d40000;
+    position: relative;
+}
+
+.title-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.title-logo {
+height: 60px;
+width: auto;   
+max-width: 80px;
+}
+
+.system-title {
+  
+   
+    color: #d40000;
+    font-size: 40px;
+    font-weight: bolder;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.search-input {
+    border: 1px solid #d40000;
+    padding: 5px 10px;
+    width: 200px;
+}
+
+.search-icon {
+    background-color: #d40000;
+    color: white;
+    padding: 5px 10px;
+    margin-left: -1px;
+    cursor: pointer;
+}
+
+.login-btn {
+    color: #d40000;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 15px;
+    border: 1px solid #d40000;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #d40000;
+    color: white;
+}
+#logout-btn {
+    color: #d40000;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 15px;
+    border: 1px solid #d40000;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+#logout-btn:hover {
+    background-color: #d40000;
+    color: white;
+}
+
+/* 导航菜单 */
+.nav-container {
+    background: linear-gradient(to right, #827d7d, #ffffff);
+    height: 50px;
+}
+
+.nav-menu {
+    display: flex;
+    height: 100%;
+}
+
+.nav-item {
+    flex: 1;
+    text-align: center;
+    line-height: 50px;
+    color: #030303;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    border-right: 1px solid #ccc; 
+}
+
+.nav-item:last-child {
+    border-right: none;
+}
+
+.nav-item:hover {
+    background: linear-gradient(to right, #d40000, #ff6b6b);
+    color: white;
+}
