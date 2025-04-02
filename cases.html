@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>典型案例 - 帮信罪全流程智能宣传教育与辅判系统</title>
+    <style>
+       
+        /* 主体内容样式 */
+     .content-container {
+            padding: 30px 5%;
+            max-width: 1500px;
+            margin: 0 auto;
+        }
+
+        /* 典型案例标题框 */
+        .case-title-box {
+            background-color: rgb(219, 71, 71);
+            color: white;
+            padding: 10px 20px;
+            font-size: 25px;
+            font-weight: bold;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            width: 20%;
+            margin: 0 auto 20px;
+        }
+
+        /* 红色虚线分割线 */
+        .red-dashed-line {
+            border-top: 2px dashed #c00;
+            margin: 20px 0;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* 案例链接列表 */
+        .case-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .case-link {
+            color: #333;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .case-link:hover {
+            color: #c00;
+        }
+
+        .case-date {
+            color: #999;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .title-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .search-box {
+                width: 100%;
+                margin-top: 15px;
+                justify-content: space-between;
+            }
+
+            .nav-menu {
+                flex-wrap: wrap;
+            }
+
+            .nav-item {
+                padding: 10px 15px;
+                font-size: 14px;
+            }
+
+            .case-title-box {
+                font-size: 16px;
+                padding: 8px 16px;
+                width: 40%;
+            }
+
+            .case-link {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 顶部红色横幅 -->
+    <div class="top-banner">
+        确保互联网在法治轨道上健康运行
+    </div>
+
+    <!-- 系统名称区域 -->
+    <div class="title-container">
+        <div class="title-left">
+            <img src="img/img2(1).png" alt="系统标志" class="title-logo">
+            <div class="system-title">网络犯罪全流程智能宣传教育与辅判系统</div>
+        </div>
+        <div class="search-box">
+            <input type="text" class="search-input" placeholder="搜索...">
+            <div class="search-icon">🔍</div>
+            <a href="login.html" class="login-btn">登录</a>
+            <a href="login.html" id="logout-btn" style="display: none;">退出</a>
+        </div>
+    </div>
+
+    <!-- 导航菜单 -->
+    <div class="nav-container">
+        <div class="nav-menu">
+            <a href="main.html" class="nav-item">首页</a>
+            <a href="system.html" class="nav-item">系统概况</a>
+            <a href="crime-intro.html" class="nav-item">罪名介绍</a>
+            <a href="cases.html" class="nav-item active">典型案例</a>
+            <a href="news.html" class="nav-item">热点新闻</a>
+        </div>
+    </div>
+
+    <!-- 主体内容 -->
+    <div class="content-container">
+        <!-- 典型案例标题框 -->
+        <div class="case-title-box">
+            典型案例
+        </div>
+
+        <!-- 案例链接列表 -->
+        <div class="case-list">
+            <a href="tycase.html" class="case-link">
+                <span>1. 潘某甲，粟某甲等掩饰、隐瞒犯所得案</span>
+                <span class="case-date">2025-02-20</span>
+            </a>
+            <a href="#" class="case-link">
+                <span>2. 某黑客团伙破坏计算机信息系统案</span>
+                <span class="case-date">2024-01-02</span>
+            </a>
+            <a href="#" class="case-link">
+                <span>3. 某平台拒不履行信息网络安全管理义务案</span>
+                <span class="case-date">2024-01-03</span>
+            </a>
+            <a href="#" class="case-link">
+                <span>4. 某个人非法利用信息网络实施诈骗案</span>
+                <span class="case-date">2024-01-04</span>
+            </a>
+            <a href="#" class="case-link">
+                <span>5. 某团伙帮助信息网络犯罪活动案</span>
+                <span class="case-date">2024-01-05</span>
+            </a>
+
+            <!-- 红色虚线分割线 -->
+            <div class="red-dashed-line"></div>
+
+            <a href="#" class="case-link">
+                <span>6. 某公司员工非法侵入计算机信息系统案</span>
+                <span class="case-date">2024-01-06</span>
+            </a>
+            <a href="#" class="case-link">
+                <span>7. 某个人编造、故意传播虚假信息案</span>
+                <span class="case-date">2024-01-07</span>
+            </a>
+            <a href="#" class="case-link">
+                <span>8. 某团伙提供侵入计算机信息系统工具案</span>
+                <span class="case-date">2024-01-08</span>
+            </a>
+            <a href="#" class="case-link">
+                <span>9. 某平台用户非法控制计算机信息系统案</span>
+                <span class="case-date">2024-01-09</span>
+            </a>
+            <a href="#" class="case-link">
+                <span>10. 某公司非法获取公民个人信息案</span>
+                <span class="case-date">2024-01-10</span>
+            </a>
+
+            <!-- 红色虚线分割线 -->
+            <div class="red-dashed-line"></div>
+
+            <a href="#" class="case-link">
+                <span>11. 某黑客攻击政府网站案</span>
+                <span class="case-date">2024-01-11</span>
+            </a>
+            <a href="#" class="case-link">
+                <span>12. 某网络诈骗团伙利用技术手段作案案</span>
+                <span class="case-date">2024-01-12</span>
+            </a>
+            <a href="#" class="case-link">
+                <span>13. 某公司员工泄露用户数据案</span>
+                <span class="case-date">2024-01-13</span>
+            </a>
+            <a href="#" class="case-link">
+                <span>14. 某个人非法获取支付结算系统数据案</span>
+                <span class="case-date">2024-01-14</span>
+            </a>
+            <a href="#" class="case-link">
+                <span>15. 某平台传播违法信息案</span>
+                <span class="case-date">2024-01-15</span>
+            </a>
+        </div>
+    </div>
+</body>
+<script src="auth.js"></script>
+</html>    
