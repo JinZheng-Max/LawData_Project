@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>典型案例 - 帮信罪全流程智能宣传教育与辅判系统</title>
+    <style>
+        /* 主内容区域 */
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1500px;
+            margin: 30px auto;
+            padding: 0 20px;
+            gap: 50px;
+        }
+
+        /* 每个内容组 */
+        .content-group {
+            flex: 1;
+
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* 黄色标题框 */
+        .yellow-title-box {
+            background: linear-gradient(to right, #fbeb08, #f2f25c);
+            color: #333;
+            padding: 12px 0;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            text-align: center;
+            width: 60%;
+            box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 1;
+        }
+
+        /* 红色边框内容框 */
+        .red-border-box {
+            border: 2px solid #E74C3C;
+            border-radius: 20px;
+            width: 100%;
+            min-height: 450px;
+            background: white;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* 新闻列表样式 */
+        .news-list {
+            list-style-type: none;
+            /* 移除默认列表符号 */
+            padding: 0;
+            margin: 0;
+            width: 100%;
+        }
+
+        .news-item {
+            padding: 12px 15px;
+            margin-bottom: 8px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .news-item:hover {
+            background-color: #f8f8f8;
+        }
+
+        .news-item a {
+            color: #141212;
+            text-decoration: none;
+            /* 移除下划线 */
+            font-size: 20px;
+            line-height: 1.5;
+            display: block;
+            transition: color 0.3s ease;
+            padding-left: 20px;
+            /* 为伪元素留出空间 */
+            position: relative;
+        }
+
+        /* 添加自定义列表符号 */
+        .news-item a:before {
+            content: "•";
+            color: #E74C3C;
+            /* 红色圆点 */
+            font-size: 20px;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .news-item a:hover {
+            color: #E74C3C;
+            /* 悬停时变为红色 */
+        }
+
+        /* 为不同专区添加不同颜色标识 */
+        .content-group:nth-child(1) .news-item a:before {
+            color: #3498db;
+            /* 校园专区 - 蓝色 */
+        }
+
+        .content-group:nth-child(2) .news-item a:before {
+            color: #2ecc71;
+            /* 企业专区 - 绿色 */
+        }
+
+        .content-group:nth-child(3) .news-item a:before {
+            color: #9b59b6;
+            /* 银发族专区 - 紫色 */
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            .news-item {
+                padding: 10px 12px;
+            }
+
+            .news-item a {
+                font-size: 15px;
+            }
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+                gap: 40px;
+            }
+
+            .content-group {
+                width: 100%;
+            }
+
+            .yellow-title-box {
+                width: 60%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 顶部红色横幅 -->
+    <div class="top-banner">
+        确保互联网在法治轨道上健康运行
+    </div>
+
+    <!-- 系统名称区域 -->
+    <div class="title-container">
+        <div class="title-left">
+            <img src="img/img2(1).png" alt="系统标志" class="title-logo">
+            <div class="system-title">网络犯罪全流程智能宣传教育与辅判系统</div>
+        </div>
+        <div class="search-box">
+            <input type="text" class="search-input" placeholder="搜索...">
+            <div class="search-icon">🔍</div>
+            <a href="login.html" class="login-btn">登录</a>
+            <a href="login.html" id="logout-btn" style="display: none;">退出</a>
+        </div>
+    </div>
+
+    <!-- 导航菜单 -->
+    <div class="nav-container">
+        <div class="nav-menu">
+            <a href="index.html" class="nav-item">首页</a>
+            <a href="system.html" class="nav-item">系统概况</a>
+            <a href="crime-intro.html" class="nav-item">罪名介绍</a>
+            <a href="cases.html" class="nav-item">典型案例</a>
+            <a href="news.html" class="nav-item active">热点新闻</a>
+        </div>
+    </div>
+
+    <!-- 内容区域 -->
+    <div class="main-content">
+        <!-- 校园专区组合 -->
+        <div class="content-group">
+            <div class="yellow-title-box">校园专区</div>
+            <div class="red-border-box">
+                <ul class="news-list">
+                    <li class="news-item"> <a href="https://m.thepaper.cn/baijiahao_30440012">【法润青春
+                            护航成长】帮人，帮忙，别帮信，法治副校长带你解密帮信罪！</a></li>
+                    <li class="news-item"> <a href="https://www.thepaper.cn/">【反诈漫画】“帮信罪”背后的 未成年“工具人”</a></li>
+                    <li class="news-item"> <a href="https://www.thepaper.cn/newsDetail_forward_26960040">【法官说法】警惕“帮信罪”
+                            莫做电诈“工具人”</a></li>
+                    <li class="news-item"> <a
+                            href="https://www.thepaper.cn/newsDetail_forward_22405922">【普法宣传】预防帮信罪：谨防“帮助”变成“帮凶”！</a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+
+        <!-- 企业专区组合 -->
+        <div class="content-group">
+            <div class="yellow-title-box">企业专区</div>
+            <div class="red-border-box">
+                <ul class="news-list">
+                    <li class="news-item"> <a href="https://www.66law.cn/laws/4256015.aspx">企业帮信罪量刑标准</a></li>
+                    <li class="news-item"> <a href="https://www.64365.com/zs/2899012.aspx">【企业帮信罪】企业应如何认识帮信罪？</a></li>
+                    <li class="news-item"> <a
+                            href="http://www.legaldaily.com.cn/IT/content/2023-08/24/content_8892225.html">企业新型网络犯罪风险的法律防控</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <!-- 银发族专区组合 -->
+        <div class="content-group">
+            <div class="yellow-title-box">银发族专区</div>
+            <div class="red-border-box">
+                <ul class="news-list">
+                    <li class="news-item"> <a
+                            href="https://m.thepaper.cn/baijiahao_30440012">南昌警方提醒：这6种行为涉嫌“帮信罪”，专盯老年人！</a></li>
+                    <li class="news-item"> <a href="https://www.thepaper.cn/">人民日报：帮助老年人远离电信网络诈骗——形成合力织密“防护网”</a></li>
+                    <li class="news-item"> <a
+                            href="https://www.thepaper.cn/newsDetail_forward_26960040">人民时评：帮老年人远离诈骗陷阱</a></li>
+                    <li class="news-item"> <a href="https://www.thepaper.cn/newsDetail_forward_22405922">提高防骗识骗能力
+                            用心守好“养老钱”——防范养老诈骗宣传进社区、进公园</a></li>
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+</body>
+
+</html>

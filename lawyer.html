@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>网络犯罪全流程智能宣传教育与辅判系统</title>
+</head>
+<style>
+    /* 提问引导区域 */
+    .question-guide {
+        padding: 30px;
+        text-align: center;
+    }
+
+    .question-guide p {
+        color: #070606;
+        margin-bottom: 15px;
+    }
+
+    .question-example {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+        gap: 30px;
+    }
+
+    .example-item {
+        background-color: #efe8f9;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1);
+        width: 25%;
+        height: 180px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        transition: box-shadow 0.3s ease;
+    }
+
+    .example-item:hover {
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15), 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .example-item p {
+        margin-bottom: 10px;
+        flex-grow: 1;
+        font-size: 20px;
+    }
+
+    .try-btn {
+        background-color: #ffd4c4;
+        color: #333;
+        text-decoration: none;
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-size: 16px;
+        align-self: flex-end;
+        margin-top: auto;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .try-btn:hover {
+        background-color: #ffc5ad;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .service-intro {
+        background-color: #ffd4c4;
+        color: #333;
+        padding: 8px 15px;
+        border-radius: 20px;
+        display: inline-block;
+        width: 40%;
+        margin: 0 auto 0px;
+    }
+
+    /* 问题输入与发送区域 */
+    .question-input-area {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+        position: relative;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .question-input-area textarea {
+        width: 100%;
+        height: 240px;
+        padding: 15px;
+        border: 2px solid #333;
+        border-radius: 10px;
+        font-size: 16px;
+        padding-right: 80px;
+        box-sizing: border-box;
+    }
+
+    .send-btn {
+        background-color: #ffd4c4;
+        color: #0f0f0f;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 20px;
+        font-size: 16px;
+        position: absolute;
+        right: 15px;
+        bottom: 15px;
+        cursor: pointer;
+    }
+
+    /* 回答区域样式 */
+    .answer-container {
+        width: 80%;
+        margin: 0 auto 30px;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        background-color: #f9f9f9;
+    }
+
+    .download-btn {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 20px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 15px;
+        display: block;
+        width: 200px;
+        text-align: center;
+        margin: 15px auto 0;
+    }
+
+    .download-btn:hover {
+        background-color: #45a049;
+    }
+</style>
+
+<body>
+    <!-- 顶部红色横幅 -->
+    <div class="top-banner">
+        确保互联网在法治轨道上健康运行
+    </div>
+    <!-- 系统名称区域 -->
+    <div class="title-container">
+        <div class="title-left">
+            <img src="img/img2(1).png" alt="系统标志" class="title-logo">
+            <div class="system-title">帮信罪全流程智能宣传教育与辅判系统</div>
+        </div>
+        <div class="search-box">
+            <input type="text" class="search-input" placeholder="搜索...">
+            <div class="search-icon">🔍</div>
+            <a href="login.html" class="login-btn">登录</a>
+            <a href="login.html" id="logout-btn" style="display: none;">退出</a>
+        </div>
+    </div>
+    <!-- 导航栏 -->
+    <div class="nav-container">
+        <div class="nav-menu">
+            <a href="index.html" class="nav-item">首页</a>
+            <a href="system.html" class="nav-item">系统概况</a>
+            <a href="crime-intro.html" class="nav-item">罪名介绍</a>
+            <a href="cases.html" class="nav-item">典型案例</a>
+            <a href="news.html" class="nav-item">热点新闻</a>
+        </div>
+    </div>
+    <!-- 提问引导区域 -->
+    <div class="question-guide">
+        <p>您可以这样问我：</p>
+        <div class="question-example">
+            <div class="example-item">
+                <p>帮信罪的入罪标准？</p>
+                <a href="#" class="try-btn">去试试</a>
+            </div>
+            <div class="example-item">
+                <p>哪些行为可能构成帮信罪？</p>
+                <a href="#" class="try-btn">去试试</a>
+            </div>
+            <div class="example-item">
+                <p>帮信罪的量刑标准？</p>
+                <a href="#" class="try-btn">去试试</a>
+            </div>
+        </div>
+        <div class="service-intro">提供在线法律咨询服务，针对性解答关于网络犯罪的疑惑</div>
+    </div>
+    <!-- 问题输入与发送区域 -->
+    <div class="question-input-area">
+        <textarea id="question-input" placeholder="请输入您的问题"></textarea>
+        <button id="send-btn" class="send-btn">发送</button>
+    </div>
+    <!-- 回答显示区域 -->
+    <div id="answer-container" class="answer-container" style="display: none;">
+        <div id="answer-content"></div>
+        <button id="download-btn" class="download-btn">下载回答</button>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        // 获取所有"去试试"按钮
+        const tryBtns = document.querySelectorAll('.try-btn');
+        // 获取输入框
+        const textarea = document.querySelector('textarea');
+
+        tryBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const question = this.previousElementSibling.textContent;
+                textarea.value = question;
+            });
+        });
+
+        // 发送问题和处理回答
+        document.getElementById('send-btn').addEventListener('click', async () => {
+            const question = document.getElementById('question-input').value;
+            const answerContainer = document.getElementById('answer-container');
+            const answerContent = document.getElementById('answer-content');
+            
+            if (!question) {
+                alert('请输入您的问题');
+                return;
+            }
+
+            try {
+                // 显示加载状态
+                answerContent.textContent = '正在获取答案，请稍候...';
+                answerContainer.style.display = 'block';
+
+                const response = await fetch('http://10.79.3.77:5000/answer', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ question: question })
+                });
+
+                if (!response.ok) {
+                    throw new Error('网络响应不正常');
+                }
+
+                const data = await response.json();
+                answerContent.innerHTML = `<h3>您的问题：</h3><p>${question}</p><h3>回答：</h3><p>${data.answer}</p>`;
+                
+                // 设置下载功能
+                document.getElementById('download-btn').onclick = function() {
+                    downloadAnswer(question, data.answer);
+                };
+                
+            } catch (error) {
+                console.error('请求出错:', error);
+                answerContent.textContent = '请求出错，请稍后再试。';
+            }
+        });
+
+        // 下载回答为文件
+        function downloadAnswer(question, answer) {
+            const content = `问题：${question}\n\n回答：${answer}\n\n---\n来自：网络犯罪全流程智能宣传教育与辅判系统\n时间：${new Date().toLocaleString()}`;
+            const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `法律咨询回答_${new Date().toISOString().slice(0, 10)}.txt`;
+            document.body.appendChild(a);
+            a.click();
+            
+            // 清理
+            setTimeout(() => {
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+            }, 100);
+        }
+    </script>
+
+<script src="auth.js"></script>
+</body>
+
+</html>

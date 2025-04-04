@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>罪名详情 - 帮信罪全流程智能宣传教育与辅判系统</title>
+    <style>
+       
+        .nav-item.active {
+            color: #c00;
+            font-weight: bold;
+        }
+        
+        .nav-item.active:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 25%;
+            width: 50%;
+            height: 3px;
+            background-color: #c00;
+        }
+        
+        /* 罪名详情页样式 */
+        .detail-container {
+            padding: 30px 5%;
+            max-width: 1500px;
+            margin: 0 auto;
+        }
+        
+        .detail-title {
+            font-size: 28px;
+            color: #c00;
+            margin-bottom: 30px;
+            text-align: center;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .detail-boxes {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .detail-box {
+            background: white;
+            border: 2px solid #c00;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            position: relative;
+            min-height: 200px;
+            width: 100%;
+        }
+        
+        .detail-box-title {
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            background-color: #c00;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        
+        .detail-content {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #333;
+            margin-top: 20px;
+        }
+        
+        .back-btn {
+            display: block;
+            margin: 40px auto 0;
+            padding: 12px 25px;
+            background: #c00;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            text-align: center;
+            width: 150px;
+            text-decoration: none;
+            font-size: 16px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .back-btn:hover {
+            background: #a00;
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 768px) {
+            .title-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .search-box {
+                width: 100%;
+                margin-top: 15px;
+                justify-content: space-between;
+            }
+            
+            .nav-menu {
+                flex-wrap: wrap;
+            }
+            
+            .nav-item {
+                padding: 10px 15px;
+                font-size: 14px;
+            }
+            
+            .detail-box {
+                padding: 20px 15px;
+            }
+            
+            .detail-box-title {
+                font-size: 16px;
+                padding: 5px 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 顶部红色横幅 -->
+    <div class="top-banner">
+        确保互联网在法治轨道上健康运行
+    </div>
+
+    <!-- 系统名称区域 -->
+    <div class="title-container">
+        <div class="title-left">
+            <img src="img/img2(1).png" alt="系统标志" class="title-logo">
+            <div class="system-title">帮信罪全流程智能宣传教育与辅判系统</div>
+        </div>
+        <div class="search-box">
+            <input type="text" class="search-input" placeholder="搜索...">
+            <div class="search-icon">🔍</div>
+            <a href="login.html" class="login-btn">登录</a>
+            <a href="login.html" id="logout-btn" style="display: none;">退出</a>
+        </div>
+    </div>
+
+    <!-- 导航菜单 -->
+    <div class="nav-container">
+        <div class="nav-menu">
+            <a href="index.html" class="nav-item">首页</a>
+            <a href="system.html" class="nav-item">系统概况</a>
+            <a href="crime-intro.html" class="nav-item active">罪名介绍</a>
+            <a href="cases.html" class="nav-item">典型案例</a>
+            <a href="news.html" class="nav-item">热点新闻</a>
+        </div>
+    </div>
+
+    <!-- 主体内容 - 罪名详情部分 -->
+    <div class="detail-container">
+        <h1 class="detail-title" id="crime-name">非法侵入计算机信息系统罪</h1>
+        
+        <div class="detail-boxes">
+            <div class="detail-box">
+                <div class="detail-box-title">刑法条文</div>
+                <div class="detail-content" id="law-content">
+                    《中华人民共和国刑法》第二百八十五条第一款：违反国家规定，侵入国家事务、国防建设、尖端科学技术领域的计算机信息系统的，处三年以下有期徒刑或者拘役。
+                </div>
+            </div>
+            
+            <div class="detail-box">
+                <div class="detail-box-title">构成要件</div>
+                <div class="detail-content" id="elements-content">
+                    1. 客体要件：本罪侵犯的客体是国家重要计算机信息系统的安全。<br>
+                    2. 客观要件：行为人实施了非法侵入国家事务、国防建设、尖端科学技术领域的计算机信息系统的行为。<br>
+                    3. 主体要件：一般主体，即年满16周岁具有刑事责任能力的自然人。<br>
+                    4. 主观要件：故意，即明知是国家重要计算机信息系统而故意侵入。
+                </div>
+            </div>
+            
+            <div class="detail-box">
+                <div class="detail-box-title">司法解释</div>
+                <div class="detail-content" id="explanation-content">
+                    根据《最高人民法院、最高人民检察院关于办理危害计算机信息系统安全刑事案件应用法律若干问题的解释》，侵入计算机信息系统，具有下列情形之一的，应当认定为刑法第二百八十五条第一款规定的"情节严重"：<br>
+                    (一)获取支付结算、证券交易、期货交易等网络金融服务的身份认证信息十组以上的；<br>
+                    (二)获取其他身份认证信息五百组以上的；<br>
+                    (三)非法控制计算机信息系统二十台以上的；<br>
+                    (四)违法所得五千元以上或者造成经济损失一万元以上的；<br>
+                    (五)其他情节严重的情形。
+                </div>
+            </div>
+        </div>
+        
+        <a href="crime-intro.html" class="back-btn">返回列表</a>
+    </div>
+
+    <script>
+        // 罪名数据
+        const crimeData = {
+            "非法侵入计算机信息系统罪": {
+                law: "《中华人民共和国刑法》第二百八十五条第一款：违反国家规定，侵入国家事务、国防建设、尖端科学技术领域的计算机信息系统的，处三年以下有期徒刑或者拘役。",
+                elements: "1. 客体要件：本罪侵犯的客体是国家重要计算机信息系统的安全。<br>2. 客观要件：行为人实施了非法侵入国家事务、国防建设、尖端科学技术领域的计算机信息系统的行为。<br>3. 主体要件：一般主体，即年满16周岁具有刑事责任能力的自然人。<br>4. 主观要件：故意，即明知是国家重要计算机信息系统而故意侵入。",
+                explanation: "根据《最高人民法院、最高人民检察院关于办理危害计算机信息系统安全刑事案件应用法律若干问题的解释》，侵入计算机信息系统，具有下列情形之一的，应当认定为刑法第二百八十五条第一款规定的'情节严重'：(一)获取支付结算、证券交易、期货交易等网络金融服务的身份认证信息十组以上的；(二)获取其他身份认证信息五百组以上的；(三)非法控制计算机信息系统二十台以上的；(四)违法所得五千元以上或者造成经济损失一万元以上的；(五)其他情节严重的情形。"
+            },
+            "非法获取计算机信息系统数据罪": {
+                law: "《中华人民共和国刑法》第二百八十五条第二款：违反国家规定，侵入前款规定以外的计算机信息系统或者采用其他技术手段，获取该计算机信息系统中存储、处理或者传输的数据，情节严重的，处三年以下有期徒刑或者拘役，并处或者单处罚金；情节特别严重的，处三年以上七年以下有期徒刑，并处罚金。",
+                elements: "1. 客体要件：计算机信息系统的数据安全。<br>2. 客观要件：非法获取计算机信息系统中的数据。<br>3. 主体要件：一般主体。<br>4. 主观要件：故意。",
+                explanation: "司法解释规定，获取支付结算、证券交易、期货交易等网络金融服务的身份认证信息十组以上的，或者获取其他身份认证信息五百组以上的，应当认定为'情节严重'。"
+            },
+            "提供侵入、非法控制计算机信息系统程序、工具罪": {
+                law: "《中华人民共和国刑法》第二百八十五条第三款：提供专门用于侵入、非法控制计算机信息系统的程序、工具，或者明知他人实施侵入、非法控制计算机信息系统的违法犯罪行为而为其提供程序、工具，情节严重的，依照前款的规定处罚。",
+                elements: "1. 客体要件：计算机信息系统的安全。<br>2. 客观要件：提供专门用于侵入、非法控制计算机信息系统的程序、工具。<br>3. 主体要件：一般主体。<br>4. 主观要件：故意。",
+                explanation: "司法解释规定，提供能够用于非法获取支付结算、证券交易、期货交易等网络金融服务身份认证信息的专门性程序、工具五人次以上的，应当认定为'情节严重'。"
+            },
+            "破坏计算机信息系统罪": {
+                law: "《中华人民共和国刑法》第二百八十六条：违反国家规定，对计算机信息系统功能进行删除、修改、增加、干扰，造成计算机信息系统不能正常运行，后果严重的，处五年以下有期徒刑或者拘役；后果特别严重的，处五年以上有期徒刑。",
+                elements: "1. 客体要件：计算机信息系统的安全。<br>2. 客观要件：对计算机信息系统功能进行破坏。<br>3. 主体要件：一般主体。<br>4. 主观要件：故意。",
+                explanation: "司法解释规定，造成十台以上计算机信息系统的主要软件或者硬件不能正常运行的，或者对二十台以上计算机信息系统中存储、处理或者传输的数据进行删除、修改、增加操作的，应当认定为'后果严重'。"
+            },
+            "拒不履行信息网络安全管理义务罪": {
+                law: "《中华人民共和国刑法》第二百八十六条之一：网络服务提供者不履行法律、行政法规规定的信息网络安全管理义务，经监管部门责令采取改正措施而拒不改正，有下列情形之一的，处三年以下有期徒刑、拘役或者管制，并处或者单处罚金：(一)致使违法信息大量传播的；(二)致使用户信息泄露，造成严重后果的；(三)致使刑事案件证据灭失，情节严重的；(四)有其他严重情节的。",
+                elements: "1. 客体要件：网络安全管理秩序。<br>2. 客观要件：不履行安全管理义务且拒不改正。<br>3. 主体要件：网络服务提供者。<br>4. 主观要件：故意。",
+                explanation: "司法解释规定，致使传播违法视频文件二百个以上的，或者致使传播违法视频文件以外的其他违法信息二千个以上的，应当认定为'致使违法信息大量传播'。"
+            },
+            "非法利用信息网络罪": {
+                law: "《中华人民共和国刑法》第二百八十七条之一：利用信息网络实施下列行为之一，情节严重的，处三年以下有期徒刑或者拘役，并处或者单处罚金：(一)设立用于实施诈骗、传授犯罪方法、制作或者销售违禁物品、管制物品等违法犯罪活动的网站、通讯群组的；(二)发布有关制作或者销售毒品、枪支、淫秽物品等违禁物品、管制物品或者其他违法犯罪信息的；(三)为实施诈骗等违法犯罪活动发布信息的。",
+                elements: "1. 客体要件：信息网络管理秩序。<br>2. 客观要件：利用信息网络实施特定违法行为。<br>3. 主体要件：一般主体。<br>4. 主观要件：故意。",
+                explanation: "司法解释规定，假冒国家机关、金融机构名义，设立用于实施违法犯罪活动的网站的，应当认定为'情节严重'。"
+            },
+            "编造、故意传播虚假信息罪": {
+                law: "《中华人民共和国刑法》第二百九十一条之一第二款：编造虚假的险情、疫情、灾情、警情，在信息网络或者其他媒体上传播，或者明知是上述虚假信息，故意在信息网络或者其他媒体上传播，严重扰乱社会秩序的，处三年以下有期徒刑、拘役或者管制；造成严重后果的，处三年以上七年以下有期徒刑。",
+                elements: "1. 客体要件：社会管理秩序。<br>2. 客观要件：编造或传播特定虚假信息。<br>3. 主体要件：一般主体。<br>4. 主观要件：故意。",
+                explanation: "司法解释规定，造成县级以上行政区域范围内居民生活秩序严重混乱的，或者致使公安、武警、消防、卫生检疫等职能部门采取紧急应对措施的，应当认定为'严重扰乱社会秩序'。"
+            },
+            "帮助信息网络犯罪活动罪": {
+                law: "《中华人民共和国刑法》第二百八十七条之二：明知他人利用信息网络实施犯罪，为其犯罪提供互联网接入、服务器托管、网络存储、通讯传输等技术支持，或者提供广告推广、支付结算等帮助，情节严重的，处三年以下有期徒刑或者拘役，并处或者单处罚金。",
+                elements: "1. 客体要件：信息网络安全管理秩序。<br>2. 客观要件：为网络犯罪提供帮助。<br>3. 主体要件：一般主体。<br>4. 主观要件：故意，明知他人利用信息网络实施犯罪。",
+                explanation: "司法解释规定，为三个以上对象提供帮助的，或者支付结算金额二十万元以上的，或者以投放广告等方式提供资金五万元以上的，应当认定为'情节严重'。"
+            }
+        };
+
+        // 页面加载时获取URL参数并显示对应罪名内容，分支
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const crimeName = urlParams.get('crime');
+            
+            if (crimeName && crimeData[crimeName]) {
+                document.getElementById('crime-name').textContent = crimeName;
+                document.getElementById('law-content').innerHTML = crimeData[crimeName].law;
+                document.getElementById('elements-content').innerHTML = crimeData[crimeName].elements;
+                document.getElementById('explanation-content').innerHTML = crimeData[crimeName].explanation;
+            } else {
+                // 默认显示第一个罪名
+                document.getElementById('crime-name').textContent = "非法侵入计算机信息系统罪";
+                document.getElementById('law-content').innerHTML = crimeData["非法侵入计算机信息系统罪"].law;
+                document.getElementById('elements-content').innerHTML = crimeData["非法侵入计算机信息系统罪"].elements;
+                document.getElementById('explanation-content').innerHTML = crimeData["非法侵入计算机信息系统罪"].explanation;
+            }
+        };
+    </script>
+</body>
+<script src="auth.js"></script>
+</html>

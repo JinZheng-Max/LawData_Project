@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>典型案例 - 帮信罪全流程智能宣传教育与辅判系统</title>
+    <style>
+        /* 主体内容区域 */
+       .main-content {
+            display: flex;
+            max-width: 1500px;
+            margin: 30px auto;
+            padding: 0 20px;
+            gap: 50px;
+            align-items: flex-start; /* 确保顶部对齐 */
+        }
+
+        /* 左侧视频区 */
+       .video-section {
+            flex: 1;
+            min-width: 0;
+        }
+
+        /* 右侧双框区 */
+       .right-sections {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        /* 统一的内容框容器 */
+       .content-box {
+            position: relative;
+            width: 100%;
+        }
+
+        /* 黄色标题框  */
+       .yellow-title-box {
+            background: linear-gradient(to right, #fbeb08, #f2f25c);
+            color: #333;
+            padding: 8px 0;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            text-align: center;
+            width: 50%;
+            box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+            position: relative;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+
+        /* 红色边框内容框 - 左边 */
+       .left-red-border-box {
+            border: 3px solid #e74c3c;
+            border-radius: 10px;
+            width: 100%;
+            background: white;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            padding: 25px 20px 20px;
+            box-sizing: border-box;
+            min-height: 600px;
+            margin-top: 0;
+        }
+
+        /* 红色边框内容框 - 右边 */
+       .right-red-border-box {
+            border: 3px solid #e74c3c;
+            border-radius: 10px;
+            width: 100%;
+            background: white;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            padding: 25px 20px 20px;
+            box-sizing: border-box;
+            min-height: 300px;
+            margin-top: 0;
+        }
+
+        /* 视频容器 */
+       .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+
+       .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+
+        }
+
+        /* 链接列表样式 */
+       .link-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+       .link-item {
+            padding: 12px 0;
+            border-bottom: 1px dashed #ddd;
+        }
+
+       .link-item:last-child {
+            border-bottom: none;
+        }
+
+       .link-item a {
+            color: #333;
+            text-decoration: none;
+            font-size: 16px;
+            display: block;
+            transition: color 0.3s;
+            padding-left: 20px;
+            position: relative;
+        }
+
+       .link-item a:before {
+            content: "•";
+            color: #e74c3c;
+            font-size: 20px;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+       .link-item a:hover {
+            color: #e74c3c;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+           .main-content {
+                flex-direction: column;
+                gap: 40px;
+            }
+
+           .yellow-title-box {
+                width: 60%;
+                font-size: 15px;
+            }
+
+           .left-red-border-box,
+           .right-red-border-box {
+                min-height: auto;
+            }
+        }
+
+        /* 使左侧视频框底部与右侧第二个框底部对齐 */
+       .video-section,
+       .right-sections div:last-child {
+            display: flex;
+            flex-direction: column;
+            align-self: stretch;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 顶部红色横幅 -->
+    <div class="top-banner">
+        确保互联网在法治轨道上健康运行
+    </div>
+
+    <!-- 系统名称区域 -->
+    <div class="title-container">
+        <div class="title-left">
+            <img src="img/img2(1).png" alt="系统标志" class="title-logo">
+            <div class="system-title">网络犯罪全流程智能宣传教育与辅判系统</div>
+        </div>
+        <div class="search-box">
+            <input type="text" class="search-input" placeholder="搜索...">
+            <div class="search-icon">🔍</div>
+            <a href="login.html" class="login-btn">登录</a>
+            <a href="login.html" id="logout-btn" style="display: none;">退出</a>
+        </div>
+    </div>
+
+    <!-- 导航菜单 -->
+    <div class="nav-container">
+        <div class="nav-menu">
+            <a href="index.html" class="nav-item">首页</a>
+            <a href="system.html" class="nav-item">系统概况</a>
+            <a href="crime-intro.html" class="nav-item">罪名介绍</a>
+            <a href="cases.html" class="nav-item active">典型案例</a>
+            <a href="news.html" class="nav-item">热点新闻</a>
+        </div>
+    </div>
+
+    <!-- 主体内容区域 -->
+    <div class="main-content">
+        <!-- 普法小视频-->
+        <div class="video-section">
+            <div class="content-box">
+                <div class="yellow-title-box">普法小视频</div>
+                <div class="left-red-border-box">
+                    <div class="video-container">
+                        <video width="100%" height="auto" controls preload="preload">
+                            <source src="https://sv.cyol.com/appvideo/svideo/20231023/sv_960672873ae5ef882a901c8427ec3c0460.mp4" type="video/mp4">
+                            您的浏览器不支持 video 标签。
+                        </video>
+                    </div>
+                    <br>
+                    <br>
+                    <p font-size="20px"> 据悉，近年来“帮信罪”日益低龄化，青少年成为“帮信罪”重点涉案人群，为筑牢防范未成年人犯罪的坚固堤坝，共青团河北省邯郸市峰峰矿区委员会结合“帮信罪”典型案例，组织拍摄了“远离帮信罪，拒做犯罪‘工具人’”的普法宣传片。（中青报·中青网记者 樊江涛 视频提供：共青团邯郸市委 ）</p>
+                </div>
+            </div>
+        </div>
+        <!-- 知识科普与相关法律法规 -->
+        <div class="right-sections">
+            <!-- 知识科普 -->
+            <div class="content-box">
+                <div class="yellow-title-box">知识科普</div>
+                <div class="right-red-border-box">
+                    <ul class="link-list">
+                        <li class="link-item"><a href="https://www.spp.gov.cn/llyj/202411/t20241127_674417.shtml">准确认定帮信罪需把握独立性罪名属性</a></li>
+                        <li class="link-item"><a href="https://www.spp.gov.cn/llyj/202412/t20241218_676699.shtml">支付结算型帮信罪与掩隐罪的司法认定</a></li>
+                        <li class="link-item"><a href="https://m.thepaper.cn/newsDetail_forward_30268437">这些行为可能构成“帮信罪”</a></li>
+                       
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 相关法律法规 -->
+            <div class="content-box">
+                <div class="yellow-title-box">相关法律法规</div>
+                <div class="right-red-border-box">
+                    <ul class="link-list">
+                        <li class="link-item">《中华人民共和国刑法》</li>
+                        <li class="link-item">《关于办理非法利用信息网络、帮助信息网络犯罪活动等刑事案件适用法律若干问题的解释》</li>
+                        <li class="link-item">《反电信网络诈骗法》</li>
+                        <li class="link-item">《网络安全法》</li>
+                        <li class="link-item">《数据安全法》</li>
+                        <li class="link-item">《个人信息保护法》</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+</body>
+
+</html>
