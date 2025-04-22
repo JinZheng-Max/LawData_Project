@@ -1,0 +1,192 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('img/llk_main.bmp');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#main-menu {
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 0;
+    color: white;
+}
+
+#main-menu h1 {
+    font-size: 3em;
+}
+
+#main-menu button {
+    margin: 5px;
+    width: 200px; 
+    height: 60px; 
+    font-size: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#basic-mode {
+    position: absolute;
+    left: 20px;
+    top: 450px;
+}
+
+#leisure-mode {
+    position: absolute;
+    left: 20px;
+    top: 650px;
+}
+
+#level-mode {
+    position: absolute;
+    left: 20px;
+    top: 850px;
+}
+
+#rankings {
+    position: absolute;
+    right: 20px;
+    bottom: 300px;
+}
+
+#settings {
+    position: absolute;
+    right: 20px;
+    bottom: 200px;
+}
+
+#help {
+    position: absolute;
+    right: 20px;
+    bottom: 100px;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(8, 45px); /* 可根据实际情况调整列数和元素大小 */
+    grid-template-rows: repeat(8, 45px); /* 可根据实际情况调整行数和元素大小 */
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.game-element {
+    width: 45px;
+    height: 45px;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.selected {
+    border: 2px solid red !important; /* 提升优先级 */
+}
+
+/* 为每个模式容器添加背景样式 */
+#basic-mode-container {
+    background-image: url('img/cxk_bg.bmp'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.game-mode-title{
+    font-size: 3em;
+    color: red;
+}
+#timer{
+    font-size: 1.5em;
+    color: blue;
+}
+#prompt{
+    position:absolute;
+    width: 150px; 
+    height: 50px; 
+    font-size: 1em;
+    bottom: 80px;
+    text-align: center;
+    left: 150px;
+}
+#reset{
+    position:absolute;
+    width: 150px; 
+    height: 50px; 
+    font-size: 1em;
+    bottom: 80px;
+    text-align: center;
+    right: 550px;
+}
+
+#back-to-main{
+    position:absolute;
+    width: 150px; 
+    height: 50px; 
+    font-size: 1em;
+    bottom: 80px;
+    text-align: center;
+    right: 150px;
+}
+#pause{
+    position:absolute;
+    width: 150px; 
+    height: 50px; 
+    font-size: 1em;
+    bottom: 80px;
+    text-align: center;
+    left: 550px;
+}
+
+#leisure-mode-container {
+    background-image: url('img/cxk_bg.bmp'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    padding: 20px;
+    color: white;
+}
+
+#level-mode-container {
+    background-image: url('img/level_mode_bg.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    padding: 20px;
+    color: white;
+}
+
+#rankings-container {
+    background-image: url('img/rankings_bg.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    padding: 20px;
+    color: white;
+}
+
+#settings-container {
+    background-image: url('img/settings_bg.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    padding: 20px;
+    color: white;
+}
+
+#help-container {
+    background-image: url('img/help_bg.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    padding: 20px;
+    color: white;
+}
+
+/* 提示边框高样式 */
+.prompt-highlight {
+    border: 2px solid green !important; /* 提升优先级 */
+}

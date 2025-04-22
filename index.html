@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>欢乐连连看</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- 背景音乐 -->
+    <audio id="bgm" src="music/jinitaimei.mp3" autoplay loop></audio>
+    <!-- 点击音效 -->
+    <audio id="click-sound" src="music/cxk_click.wav"></audio>
+    <!-- 消子音效 -->
+    <audio id="eliminate-sound" src="music/cxk_clear.wav"></audio>
+
+    <div id="main-menu">
+        <button id="basic-mode">基本模式</button>
+        <button id="leisure-mode">休闲模式</button>
+        <button id="level-mode">关卡模式</button>
+        <button id="rankings">排行榜</button>
+        <button id="settings">设置</button>
+        <button id="help">帮助</button>
+    </div>
+    <div id="basic-mode-container" style="display: none;">
+        <h2 class="game-mode-title">基本模式</h2>
+        <p>计时器：<span id="timer">00:00</span></p>
+        <div id="game-board"></div>
+        <button id="reset">重排</button>
+        <button id="prompt">提示</button>
+        <button id="back-to-main">返回主菜单</button>
+        <button id="pause">暂停</button>
+    </div>
+    <div id="leisure-mode-container" style="display: none;">
+        <h2>休闲模式</h2>
+        <!-- 休闲模式游戏内容后续填充 -->
+        <button id="back-to-main-leisure">返回主菜单</button>
+    </div>
+    <div id="level-mode-container" style="display: none;">
+        <h2>关卡模式</h2>
+        <!-- 关卡模式游戏内容后续填充 -->
+        <button id="back-to-main-level">返回主菜单</button>
+    </div>
+    <div id="rankings-container" style="display: none;">
+        <h2>排行榜</h2>
+        <!-- 排行榜内容后续填充 -->
+        <button id="back-to-main-rankings">返回主菜单</button>
+    </div>
+    <div id="settings-container" style="display: none;">
+        <h2>设置</h2>
+        <!-- 设置内容后续填充 -->
+        <button id="back-to-main-settings">返回主菜单</button>
+    </div>
+    <div id="help-container" style="display: none;">
+        <h2>帮助</h2>
+        <!-- 帮助内容后续填充 -->
+        <button id="back-to-main-help">返回主菜单</button>
+    </div>
+    <script type="module" src="gameLogic.js"></script>
+    <script type="module" src="gameControl.js"></script>
+    <script type="module" src="uiManager.js"></script>
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>
